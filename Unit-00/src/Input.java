@@ -28,22 +28,22 @@ public class Input
 		intTwo = keyboard.nextInt();
 
 		System.out.print("Enter an double :: ");
-		doubleOne = keyboard.nextInt();
+		doubleOne = keyboard.nextDouble();
 		
 		System.out.print("Enter an double :: ");
-		doubleTwo = keyboard.nextInt();
+		doubleTwo = keyboard.nextDouble();
 		
 		System.out.print("Enter a float :: ");
-		floatOne = keyboard.nextInt();
+		floatOne = keyboard.nextFloat();
 		
 		System.out.print("Enter a float :: ");
-		floatTwo = keyboard.nextInt();
+		floatTwo = keyboard.nextFloat();
 		
 		System.out.print("Enter a short :: ");
-		shortOne = (short) keyboard.nextInt();
+		shortOne = keyboard.nextShort();
 		
 		System.out.print("Enter a short :: ");
-		shortTwo = (short) keyboard.nextInt();
+		shortTwo = keyboard.nextShort();
 
 
 		//add in input for all variables
