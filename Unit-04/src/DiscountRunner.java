@@ -20,7 +20,6 @@ public class DiscountRunner
 		
 		out.printf("Bill after discount :: ");
 		out.printf("%.2f\n", Discount.getDiscountedBill(amt));
-		
 
 	}
 }
