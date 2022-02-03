@@ -18,9 +18,15 @@ public class WordsCompareRunner
 		String one = keyboard.nextLine();
 		System.out.println("Enter another word :: ");
 		String two = keyboard.nextLine();
+		System.out.println("Enter a word :: ");
+		String three = keyboard.nextLine();
+		System.out.println("Enter another word :: ");
+		String four = keyboard.nextLine();
 		
 		WordsCompare test = new WordsCompare();
 		test.setWords(one, two);
+		System.out.println(test);
+		test.setWords(three, four);
 		System.out.println(test);
 	}
 }
