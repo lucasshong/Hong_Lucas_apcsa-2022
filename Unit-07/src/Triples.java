@@ -50,16 +50,11 @@ public class Triples
 				int b = j;
 				for (int k = j; k < number; k++) {
 					int c = k;
-					/*
-					if (!(a < b && b < c))  {
-						continue;
-					}
-					*/
+					
 					pythag=(Math.pow(a,2)+ Math.pow(b,2) == Math.pow(c, 2));
 					evenodd=((a % 2 != 0 && b % 2 == 0 && c % 2 != 0) || (b % 2 != 0 && a % 2 == 0 && c % 2 != 0));
 					gcf=(greatestCommonFactor(a,b,c) <= 1);
-					//System.out.println(a + " " + b + " " + c + " " + pythag + " " + evenodd + " " + gcf);
-					if ( pythag && evenodd && gcf) {
+					if (pythag && evenodd && gcf) {
 						output += a + " " + b + " " + c + "\n";
 					}
 				}	
