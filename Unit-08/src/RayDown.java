@@ -13,9 +13,6 @@ public class RayDown
 		
 		for (int i = 1; i < numArray.length; i++) {
 			
-			if (numArray[i] < numArray[i-1]) {
-				continue;
-			}
 			if (numArray[i] >= numArray[i-1]) {
 				return false;
 			}
