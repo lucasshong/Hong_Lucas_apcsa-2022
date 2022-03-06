@@ -12,13 +12,13 @@ public class Toy
 	public Toy()
 	{
 		name = "";
-		count = 1;
+		setCount(1);
 	}
 
 	public Toy( String nm )
 	{
 		name = nm;
-		count = 1;
+		setCount(1);
 	}
 	
 	public int getCount()

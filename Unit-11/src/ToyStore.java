@@ -60,13 +60,13 @@ public class ToyStore
   	public void sortToysByCount()
   	{
   		ArrayList<Toy> sorted = new ArrayList<Toy>();
-  		int count = 0;
+  		int index = 0;
   		
-  		for(int i = toyList.size(); i > 0; i++) {
+  		for(int i = toyList.size(); i > 0; i--) {
   			sorted.add(new Toy(getMostFrequentToy()));
-  			sorted.get(count).setCount(getThatToy(getMostFrequentToy()).getCount());
+  			sorted.get(index).setCount(getThatToy(getMostFrequentToy()).getCount());
   			toyList.remove(getThatToy(getMostFrequentToy()));
-  			count++;
+  			index++;
   		}
   		
   		toyList = sorted;
