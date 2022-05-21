@@ -113,6 +113,37 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void keepOnlyRed()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel pixel = null;
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  pixel = pixels[row][col];
+			  pixel.setBlue(0);
+			  pixel.setGreen(0);
+		  }
+	  }
+  }
+  
+  
+  public void keepOnlyGreen()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel pixel = null;
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  pixel = pixels[row][col];
+			  pixel.setRed(0);
+			  pixel.setBlue(0);
+		  }
+	  }
+  }
+  
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -142,10 +173,8 @@ public class Picture extends SimplePicture
     int count = 0;
     Pixel[][] pixels = this.getPixels2D();
     
-    // loop through the rows
     for (int row = 27; row < 97; row++)
     {
-      // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
       {
         
@@ -468,6 +497,33 @@ public class Picture extends SimplePicture
 		  }
 	  }
   }
+  
+  public void backgroundSwap(Picture moon)
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel[][] moonPixels = moon.getPixels2D();
+	  
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  if (pixels[row][col].getBlue() > pixels[row][col].getRed() && pixels[row][col].getBlue() > pixels[row][col].getGreen()) {
+				  
+				  pixels[row][col].setColor(moonPixels[row][col].getColor());
+				  
+			  }
+		  }
+	  }
+	  
+	  for (int row = 367; row < 388; row++)
+	  {
+		  for (int col = 356; col < 403; col++)
+		  {
+			  pixels[row][col].setColor(pixels[row][col-50].getColor());
+			  
+		  }
+	  }
+ }
   
   
   /* Main method for testing - each class in Java can have a main 
